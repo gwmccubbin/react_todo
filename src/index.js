@@ -1,8 +1,40 @@
+// react
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+
+// styles
 import './styles/index.css';
-import App from './components/App';
+
+// components
+import Layout from './components/Layout';
+
+// redux
+import { bindActionCreators } from 'redux';
+import { Provider, connect } from 'react-redux';
+import store from './store';
+
+// action creators
+import * as actionCreators from './actions/actionCreators';
+
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function mapStateToProps(state) {
+  return {
+    todos: state.todos
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+const App = connect(mapStateToProps, mapDispatchToProps)(Layout);
+
+const provider = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+)
+
+render(provider, document.getElementById('root'));
 registerServiceWorker();
