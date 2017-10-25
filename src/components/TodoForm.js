@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class TodoForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.refs.todo.value);
+    this.props.addTodo(this.refs.todo.value);
   }
 
   render() {
