@@ -5,9 +5,14 @@ import TodoList from './TodoList';
 class Layout extends Component {
   render() {
     return (
-      <div className="layout">
-        <TodoForm {...this.props} />
-        <TodoList {...this.props} />
+      <div className="layout container">
+        <div className="row">
+          <div className="col-md-12">
+            <h1>Todos</h1>
+            <TodoForm {...this.props} />
+            <TodoList {...this.props} />
+          </div>
+        </div>
       </div>
     )
   }

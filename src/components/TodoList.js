@@ -4,7 +4,7 @@ import Todo from './Todo';
 class TodoList extends Component {
   render() {
     return (
-      <ul>
+      <ul className="list-unstyled">
         {this.props.todos.map((todo, i) => <Todo {...this.props} key={i} i={i} todo={todo} />)}
       </ul>
     );

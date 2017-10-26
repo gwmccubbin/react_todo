@@ -8,8 +8,8 @@ class TodoForm extends Component {
 
   render() {
     return(
-      <form onSubmit={(e) => this.handleSubmit(e)} >
-        <input type="text" ref="todo" placeholder="Add todo..." />
+      <form ref="form" onSubmit={(e) => this.handleSubmit(e)} >
+        <input type="text" className="form-control" ref="todo" placeholder="Add todo..." />
         <input type="submit" hidden />
       </form>
     )

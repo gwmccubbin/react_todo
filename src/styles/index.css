@@ -1,0 +1,11 @@
+.container {
+  width: 650px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.checkbox {
+  border-bottom: 1px solid lightgrey;
+}
