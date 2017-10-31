@@ -1,8 +1,14 @@
 [
   {
-    "text": "Learn React"
+    "text": "Learn React",
+    "completed": false
   },
   {
-    "text": "Learn Redux"
+    "text": "Learn Redux",
+    "completed": false
+  },
+  {
+    "text": "Build todo app",
+    "completed": true
   }
 ]
