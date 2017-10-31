@@ -12,3 +12,9 @@ export function completeTodo(index) {
   }
 }
 
+export function rollbackTodo(index) {
+  return {
+    type: 'ROLLBACK_TODO',
+    index
+  }
+}

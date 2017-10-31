@@ -12,6 +12,12 @@ function todos(state = [], action) {
         {...state[i], completed: true},
         ...state.slice(i + 1)
       ]
+    case 'ROLLBACK_TODO' :
+      return [
+        ...state.slice(0,i),
+        {...state[i], completed: false},
+        ...state.slice(i + 1)
+      ]
     default:
       return state;
   }
