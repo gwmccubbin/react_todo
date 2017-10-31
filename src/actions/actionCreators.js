@@ -4,3 +4,11 @@ export function addTodo(text) {
     text
   }
 }
+
+export function completeTodo(index) {
+  return {
+    type: 'COMPLETE_TODO',
+    index
+  }
+}
+

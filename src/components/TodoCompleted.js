@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-class Todo extends Component {
+class TodoCompleted extends Component {
   handleClick() {
-    this.props.completeTodo(this.props.i);
+    this.props.rollbackTodo(this.props.i);
   }
 
   render() {
     return(
       <div className="checkbox" ref="todo">
-        <label>
+        <label className="completed">
           <input type="checkbox" onClick={() => this.handleClick()} />
           {this.props.todo.text}
         </label>
@@ -17,4 +17,4 @@ class Todo extends Component {
   }
 };
 
-export default Todo;
+export default TodoCompleted;
