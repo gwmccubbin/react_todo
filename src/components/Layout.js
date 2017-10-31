@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
+import TodoListCompleted from './TodoListCompleted';
 
 class Layout extends Component {
   render() {
@@ -11,6 +12,8 @@ class Layout extends Component {
             <h1>Todos</h1>
             <TodoForm {...this.props} />
             <TodoList {...this.props} />
+            <h2>Completed</h2>
+            <TodoListCompleted {...this.props} />
           </div>
         </div>
       </div>
