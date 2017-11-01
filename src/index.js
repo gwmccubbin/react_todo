@@ -16,8 +16,6 @@ import store from './store';
 // action creators
 import * as actionCreators from './actions/actionCreators';
 
-import registerServiceWorker from './registerServiceWorker';
-
 function mapStateToProps(state) {
   return {
     todos: state.todos
@@ -37,4 +35,3 @@ const provider = (
 )
 
 render(provider, document.getElementById('root'));
-registerServiceWorker();
